@@ -1,9 +1,168 @@
-/* add css module styles here (optional) */
+.grid__daily {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
-.test {
-  margin: 2em;
-  padding: 0.5em;
-  border: 2px solid #000;
-  font-size: 2em;
+  display: grid;
+  grid-template-columns: 190px auto;
+  grid-template-areas:
+    'header header'
+    'timer users';
+  grid-gap: 5px;
+  padding: 5px;
+  background-color: black;
+  max-width: 500px; 
+  margin: auto;
+}
+.grid__daily > div {
+  background-color: #3a444c;
+  border-radius: 5px;
+  color: rgba(175, 240, 175);
+  font-weight: 200;
+  box-sizing: border-box;  
+}
+.grid__daily > div:not(.grid__header) {
+  height:175px;
+  font-size: 15px;
+}
+
+.grid__header { 
+  grid-area: header; 
+  font-size: 16px;
+  height:25px;
   text-align: center;
+}
+
+.grid__users { 
+  text-align: left;
+  padding: 9px;
+  overflow-y: auto;
+  grid-area: users; 
+  align-self: stretch;
+  grid-gap: 3px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-auto-rows: minmax(min-content, max-content);
+}
+.grid__users button {
+  background-color: #3a444c;
+  font-size: 13px;
+  cursor: pointer;
+  outline: none;  
+  border: none;
+  color: rgba(200, 93, 210);
+}
+.grid__users button:disabled {
+  color: darkgrey;
+  cursor: initial;
+}
+.user__name {
+  overflow: hidden;
+  margin: initial;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+
+.grid__timer { 
+  grid-area: timer; 
+  position: relative;
+}
+.timer {
+  height:100%;
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  left: 55%;
+  transform: translate(-50%, 0);
+  pointer-events: none;
+  display: flex; 
+  justify-content: left; 
+  align-items: center; 
+}
+.timer__text {
+  display: flex; 
+  justify-content: space-evenly; 
+  align-items: center; 
+  position: absolute; 
+  margin-left:25px;
+  font-size: 19px;
+  letter-spacing: -1px;
+}
+.minitimer__text {
+  position: absolute;
+  color: rgba(200, 93, 210);
+  font-size: 15px;
+  letter-spacing: -1px;
+  transform: translate(123px, 0);
+  font-weight: 400;
+}
+.minitimer__path {
+  transform: translate(2px, -1px);
+}
+.minitimer__animation {
+  transform: translate(2px, -1px);
+}
+.timer__animation {
+  margin: 0px;
+ }
+
+.timer__play {
+  color: rgba(175, 240, 175);
+  padding: 0px;
+  border: 0;
+  background: transparent;
+  box-sizing: border-box;
+  height: 15px; 
+  margin-left: 10px;
+
+  border-color: transparent transparent transparent rgba(175, 240, 175);
+  transition: 100ms all ease;
+
+  border-style: solid;
+  border-width: 12px 0 12px 18px;
+}
+.timer__play:hover {
+  border-color: transparent transparent transparent darkgrey;
+}
+.timer__pause:hover {
+  border-color: transparent transparent transparent darkgrey;
+}
+.timer__pause {
+  color: rrgba(175, 240, 175);
+  border: 0;
+  background: transparent;
+  box-sizing: border-box;
+  height: 20px; 
+  margin-left: 10px;
+  border-color: transparent transparent transparent rgba(175, 240, 175);
+  transition: 100ms all ease;
+  cursor: pointer;
+
+  border-style: double;
+  border-width: 0px 0 0px 10px;
+}
+.timer__play:focus {
+  outline:none;
+}
+.timer__pause:focus {
+  outline:none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: black;
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(175, 240, 175);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(119, 170, 119);
 }

@@ -4,13 +4,29 @@
   "description": "Daily Scrum React Component",
   "author": "lesstalkmorecode",
   "license": "MIT",
-  "repository": "lesstalkmorecode/react-daily-scrum",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lesstalkmorecode/react-daily-scrum.git"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  },
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
+  "homepage": "https://lesstalkmorecode.github.io/react-daily-scrum/",
+  "bugs": {
+    "url": "https://github.com/lesstalkmorecode/react-daily-scrum/issues"
+  },
   "engines": {
     "node": ">=10"
   },
+  "keywords": [
+    "react",
+    "react-component",
+    "daily-scrum",
+    "daily-scrum"
+  ],
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
