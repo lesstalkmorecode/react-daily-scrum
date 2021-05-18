@@ -29,6 +29,8 @@ class Example extends Component {
     )
   }
 }
+
+export default App
 ```
 
 ## License
