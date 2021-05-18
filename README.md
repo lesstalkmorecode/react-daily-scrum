@@ -33,4 +33,3 @@ class Example extends Component {
 
 ## License
 
-MIT © [lesstalkmorecode](https://github.com/lesstalkmorecode)

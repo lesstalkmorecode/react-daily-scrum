@@ -1,15 +1,15 @@
 {
   "name": "@lesstalkmorecode/react-daily-scrum",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "description": "Daily Scrum React Component",
   "author": "lesstalkmorecode",
-  "license": "MIT",
+  "license": "",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lesstalkmorecode/react-daily-scrum.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/lesstalkmorecode"
+    "registry": "https://npm.pkg.github.com/"
   },
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
